@@ -1,8 +1,12 @@
 # forecast-model
 
-此repo存放用於預估未來碳排放的model
+此repo用於將預測值存放進資料庫
 
->> 執行 python3 main.py 即可將預測資料新增置資料庫
+### 使用方式
+
+執行以下:
+> python3 ./main.py
+
 
 ### .env 值
 
