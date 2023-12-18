@@ -1,0 +1,20 @@
+
+
+# IDE configuration
+.idea/*
+.idea
+.vscode/*
+.vscode
+
+# OS generated files
+.DS_Store
+.DS_Store?
+
+# Python virtual environment
+venv/
+
+# quick run
+run.ps1
+
+# private data
+.env
