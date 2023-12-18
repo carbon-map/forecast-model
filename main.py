@@ -1,9 +1,6 @@
 import os
 from dotenv import load_dotenv
 import pickle
-import pandas as pd
-import numpy as np
-from statsmodels.tsa.statespace.sarimax import SARIMAX
 import mysql.connector
 load_dotenv()
 
@@ -87,7 +84,7 @@ for location in cities:
     for forecast_value in forecast_mean:
         value = int(forecast_value)
         # print(f'{year}-{month:02d}: {value}')
-        query_str = f"insert into carbonmap (year, month, city, amount) values ({year}, {month}, \"{chinese_name[location]}\", {value});"
+        query_str = f"insert into carbonmap (year, month, city, amount, isPredict) values ({year}, {month}, \"{chinese_name[location]}\", {value}, true);"
         print("query = ", query_str)
         cursor.execute(query_str)
         connection.commit()
