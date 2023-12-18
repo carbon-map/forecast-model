@@ -85,6 +85,7 @@ for location in cities:
         value = int(forecast_value)
         # print(f'{year}-{month:02d}: {value}')
         query_str = f"insert into carbonmap (year, month, city, amount, isPredict) values ({year}, {month}, \"{chinese_name[location]}\", {value}, true);"
+        # query_str = f"update carbonmap set isPredict = true, amount = {value} where year = {year} and month = {month} and city = \"{chinese_name[location]}\";"
         print("query = ", query_str)
         cursor.execute(query_str)
         connection.commit()
